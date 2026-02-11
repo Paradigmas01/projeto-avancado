@@ -12,3 +12,4 @@ Artigos encontrados
 - [ ] https://docs.github.com/pt/copilot/tutorials/copilot-chat-cookbook/testing-code TESTES DE CÓDIGO COM COPILOT (ARTUR)
 - [ ] https://docs.github.com/pt/copilot/tutorials/customization-library/prompt-files/generate-unit-tests COMO GERAR TESTES UNITÁRIOS COM PROMPTS E COPILOT (VINICIUS)
 - [ ] https://docs.github.com/pt/copilot/tutorials/write-tests COMO ESCREVER TESTES COM COPILOT (EDUARDO)
+- [ ] https://docs.github.com/pt/copilot/tutorials/review-ai-generated-code MATEUS
