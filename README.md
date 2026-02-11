@@ -13,3 +13,8 @@ Artigos encontrados
 - [ ] https://docs.github.com/pt/copilot/tutorials/customization-library/prompt-files/generate-unit-tests COMO GERAR TESTES UNITÁRIOS COM PROMPTS E COPILOT (VINICIUS)
 - [ ] https://docs.github.com/pt/copilot/tutorials/write-tests COMO ESCREVER TESTES COM COPILOT (EDUARDO)
 - [ ] https://docs.github.com/pt/copilot/tutorials/review-ai-generated-code MATEUS
+
+## Descrição da relação com disciplina/profissão
+
+- O desenvolvimento de front-end requer testes extensivos para que nada passe de uma sprint para outra, por exemplo
+- O uso de IA pode aumentar a produtividade e a velocidade com a escrita desses testes unitáiros e de integração, melhorando e automatizando processos e deixando o time livre para focar no desenvolvimento de novas features e correções de bugs 
