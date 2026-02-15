@@ -4,8 +4,10 @@
 
 Artigos encontrados
 
-- [ ] https://arxiv.org/abs/2510.01024 MATEUS https://sol.sbc.org.br/index.php/sbes/article/view/37006 COMO USAR IA GENERATIVA PRA ESCREVER TESTES DE INTEGRAÇÃO
-- [ ] https://josif.ifsuldeminas.edu.br/ojs/index.php/anais/article/view/2762 PEDRO LINO
+- [ ]  GenIA-E2ETest: Uma abordagem generativa baseada em IA para automação de testes ponta a ponta https://arxiv.org/abs/2510.01024 - MATEUS
+- [ ]  https://sol.sbc.org.br/index.php/sbes/article/view/37006 COMO USAR IA GENERATIVA PRA ESCREVER TESTES DE INTEGRAÇÃO - MATEUS
+
+- [ ] TESTES DE SOFTWARE E INTELIGÊNCIA ARTIFICIAL https://josif.ifsuldeminas.edu.br/ojs/index.php/anais/article/view/2762 PEDRO LINO
 
 ### Documentação
 
@@ -17,4 +19,4 @@ Artigos encontrados
 ## Descrição da relação com disciplina/profissão
 
 - O desenvolvimento de front-end requer testes extensivos para que nada passe de uma sprint para outra, por exemplo
-- O uso de IA pode aumentar a produtividade e a velocidade com a escrita desses testes unitáiros e de integração, melhorando e automatizando processos e deixando o time livre para focar no desenvolvimento de novas features e correções de bugs 
+- O uso de IA pode aumentar a produtividade e a velocidade com a escrita desses testes unitárIos e de integração, melhorando e automatizando processos e deixando o tempo livre para focar no desenvolvimento de novas features e correções de bugs 
