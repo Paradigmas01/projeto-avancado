@@ -27,5 +27,5 @@ Ficará responsável pelas seguintes partes do projeto:
 No Divulga-IF, fará testes na página de "Novos Trabalhos";
 
 ### Vinícius
-Ficará responável por Auxiliar Pedro em sua parte do projeto.
-No Divulga-IF, fará testes na página "sobre" e auxiliará Pedro com os testes na página de "Novos Trabalhos";
+Ficará responável por reunir todas dos documentos no read.me principal
+No Divulga-IF, fará testes na página "sobre";
