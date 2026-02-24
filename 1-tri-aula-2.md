@@ -21,3 +21,13 @@
 ### Abordagem de Construção (como será desenvolvido sem improviso?)
   Usaremos protocolos, artigos e documentos vereficados para criação de pronpt que utilizaremos nas IAs para criação de testes que seram implementados.
   
+## 3. MATERIAL
+
+- Material principal: https://www.mdpi.com/1999-4893/18/11/717 
+
+- Outros:
+- https://docs.github.com/pt/copilot/tutorials/copilot-chat-cookbook/testing-code
+- https://docs.github.com/pt/copilot/tutorials/customization-library/prompt-files/generate-unit-tests
+- https://docs.github.com/pt/copilot/tutorials/write-tests
+- https://josif.ifsuldeminas.edu.br/ojs/index.php/anais/article/view/2762/2278
+
