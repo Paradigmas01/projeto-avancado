@@ -13,3 +13,4 @@
 - https://docs.github.com/pt/copilot/tutorials/customization-library/prompt-files/generate-unit-tests
 - https://docs.github.com/pt/copilot/tutorials/write-tests
 - https://josif.ifsuldeminas.edu.br/ojs/index.php/anais/article/view/2762/2278
+- https://arxiv.org/pdf/2506.15227
