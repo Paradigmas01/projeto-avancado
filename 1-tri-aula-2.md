@@ -1,8 +1,6 @@
 # Equipe Paradigmas 24/02/2026
 
-## Projeto
-
-##Equipe
+## Equipe
 Em nossa equipe, cada membro fará atividades isoladas, cada um realizará testes de software em alguma página do front-end do Divulga-IF de acordo com o artigo que ficou responsável.
 
 ### Artur
