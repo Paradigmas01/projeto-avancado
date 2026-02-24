@@ -4,7 +4,7 @@
 Em nossa equipe, cada membro fará atividades isoladas, cada um realizará testes de software em alguma página do front-end do Divulga-IF de acordo com o artigo que ficou responsável.
 
 ### Artur
-Ficará responsável pelas seguintes partes do projeto:
+Ficará responsável pelas seguintes partes do escopo:
   - O que será feito? (problema claro + limites do escopo);
   - Como será feito? (linguagem + ferramenta principal + arquitetura básica);
   - Onde entra o tema? (IA / Qualidade / Paradigma – aplicação concreta);
@@ -20,7 +20,7 @@ Ficará responsável pelo material de estudo:
 No Divulga-IF, fará testes na página principal.
 
 ### Pedro
-Ficará responsável pelas seguintes partes do projeto:
+Ficará responsável pelas seguintes partes do escopo:
   - O que será desenvolvido, analisado ou comparado? O que será feito?
   - Relevância: Que problema real resolve? Há complexidade suficiente para toda a equipe?
   - Abordagem de Construção (como será desenvolvido sem improviso?);
