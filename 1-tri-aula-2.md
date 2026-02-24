@@ -17,9 +17,8 @@ Documentará as tarefas de cada membro da equipe e fará testes na página "Meus
 
 ### Mateus
 Ficará responsável pelo material de estudo:
-- 1 principal (validar com professor);
-- Validar e aprovar os materiais de estudo ;
-    - verificar os materiais de estudos para avaliação;
+  - 1 principal (validar com professor);
+  - Verificar e Validar os materiais de estudo ;
 No Divulga-IF, fará testes na página principal.
 
 ### Pedro
