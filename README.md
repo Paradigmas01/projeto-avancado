@@ -5,7 +5,7 @@
 - O desenvolvimento de front-end requer testes extensivos para que nada passe de uma sprint para outra, por exemplo
 - O uso de IA pode aumentar a produtividade e a velocidade com a escrita desses testes unitários e de integração, melhorando e automatizando processos e deixando o tempo livre para focar no desenvolvimento de novas features e correções de bugs 
 
-#Descrição do projeto 
+# Descrição do projeto 
 
 ## Avaliação do Divulga IF 
 ### Porque iremos fazer a avaliação do divulga IF?
