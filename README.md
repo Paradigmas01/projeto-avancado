@@ -8,7 +8,7 @@
 # Descrição do projeto 
 
 ## Avaliação do Divulga IF 
-### Porque iremos fazer a avaliação do divulga IF?
+### Porque iremos fazer a avaliação do DivulgaIF?
 
 Ao analisar a demanda por testes de software, identificamos o sistema [DivulgaIF](https://divulgaif.com.br/pt), desenvolvido nas disciplinas de Projeto Integrador e Construção de Software no terceiro ano de Engenharia de Software. Devido ao tempo limitado do ano letivo, o projeto foi concluído sem a devida implementação de testes unitários.
 
@@ -20,7 +20,7 @@ Serão desenvolvidos testes unitários para o front-end do site DivulgaIF, com o
 
 ## Etapas do processo 
 
-- Clonar o repositório do divulga IF
+- Clonar o repositório do DivulgaIF
 - Gerar testes unitários do front-end utilizando inteligência artificial
 - Criar uma branch para realizar seus comites
 - Os Commits deve ser padronizados seguindo padrão de tipagem: feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert, hotfix, wip, init, config, deps
