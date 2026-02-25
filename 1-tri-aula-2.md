@@ -12,10 +12,10 @@
   IA e Qualidade.
 ### O que será desenvolvido, analisado ou comparado? O que será feito?
   Sera feito testes de softwares unitarios para avaliar o front-and e tambem avaliaremos 
-  com o software tal questões de interação humano computador, visando encontrar partes 
+  com o software Wave questões de interação humano computador, visando encontrar partes 
   problemasticas no software.
 ### Relevância: Que problema real resolve? Há complexidade suficiente para toda a equipe?
-  Resolveremos o preblema de inesistencia de testes no front-end do site DivugaIF assim encontrando
+  Resolveremos o problema de inesistencia de testes no front-end do site DivugaIF assim encontrando
   problemas no sodtware.
   Sim ah complexidade para toda equipe.
 ### Abordagem de Construção (como será desenvolvido sem improviso?)
