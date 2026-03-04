@@ -49,7 +49,7 @@ Para rodar a suite de testes atualizada, utilize os comandos:
 
 
 
-    ### Artur
+### Artur
 
     Relatório de Funcionamento dos Testes: LoginPage (Versão Jest)
 A abordagem principal desta suíte de testes é tratar o componente LoginPage como uma "caixa preta". Nós não testamos a API real ou as rotas do navegador; em vez disso, simulamos todas as dependências externas para garantir que a interface reaja corretamente a diferentes cenários.
