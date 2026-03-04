@@ -74,3 +74,13 @@ A abordagem principal desta suíte de testes é tratar o componente LoginPage co
 
 ### 3. Controle de Tempo (Timers)
     No código original, após o login, há um setTimeout de 1 segundo antes de redirecionar a página. Para evitar que o teste fique esperando 1 segundo real (o que deixaria a suíte lenta), usamos o jest.useFakeTimers(). Com     o comando jest.advanceTimersByTime(1000), avançamos o "relógio interno" do teste em 1 segundo instantaneamente, verificando em seguida se o redirecionamento ocorreu.
+
+
+# Vinicius e Pedro 
+Neste trabalho foram desenvolvidos testes unitários para o componente **MyWorks**, localizado no arquivo `page.jsx`. Para isso foram utilizados o **Jest** e a **React Testing Library**, que permitem testar componentes React simulando o comportamento do usuário.
+
+Foi criado o arquivo `newWorks.test.js`, onde foram implementados testes para verificar se o componente renderiza corretamente e se suas principais funcionalidades estão funcionando. Como o componente depende de vários módulos externos, foram utilizados **mocks** para simular serviços como tradução, navegação, hooks de dados e componentes da interface. Isso permite que os testes sejam executados de forma isolada, sem depender de APIs ou de outras partes do sistema.
+
+Entre os testes realizados estão a verificação da renderização do título e dos botões da página, a abertura do modal de filtros, a navegação ao clicar no botão **Novo Trabalho**, a alteração no campo de busca e a renderização do componente de resultados paginados.
+
+De forma geral, os testes garantem que as funcionalidades principais da página **MyWorks** continuem funcionando corretamente, contribuindo para a qualidade e manutenção do sistema.
