@@ -482,6 +482,7 @@ Sanitização de dados de entrada (proteção primária contra Cross-Site Script
 
 ### 3. Falhas Detectadas (Achados de Auditoria)
   A apresentação das falhas detectadas exibe, em detalhes, as irregularidades encontradas. Durante a simulação paralela de dados e uso de ITF, foram identificados falsos positivos no sistema de validação (validateForm): o   sistema informa que o formulário é válido, mas os dados inseridos são estruturalmente perigosos.
+
   
   Falha : Ausência de Limite de Caracteres (Vulnerabilidade a Payload Massivo)
   O formulário não impõe restrição de tamanho (maxLength) aos dados do usuário. O script de auditoria conseguiu inserir e submeter com sucesso uma string contendo 10.000 caracteres.
