@@ -475,13 +475,17 @@ test: implement comprehensive test suite for Home and WorkDetail
   
 ### 2. Pontos de Controle Avaliados
 Validação de campos obrigatórios (presença de dados).
+
 Validação de limite de caracteres (prevenção de envio de payloads extensivos).
+
 Sanitização de dados de entrada (proteção primária contra Cross-Site Scripting - XSS).
 
 ### 3. Falhas Detectadas (Achados de Auditoria)
   A apresentação das falhas detectadas exibe, em detalhes, as irregularidades encontradas. Durante a simulação paralela de dados e uso de ITF, foram identificados falsos positivos no sistema de validação (validateForm): o   sistema informa que o formulário é válido, mas os dados inseridos são estruturalmente perigosos.
+  
   Falha : Ausência de Limite de Caracteres (Vulnerabilidade a Payload Massivo)
   O formulário não impõe restrição de tamanho (maxLength) aos dados do usuário. O script de auditoria conseguiu inserir e submeter com sucesso uma string contendo 10.000 caracteres.
+  
   Risco Associado: Isso representa um gargalo grave. O envio repetitivo de payloads massivos pode onerar a API do back-end, resultando em lentidão, consumo excessivo de banda e até mesmo abrindo margem para ataques de       Negação de Serviço (DoS).
   Falha : Ausência de Validação de Formato e Sanitização
   Descrição: O campo de e-mail/usuário aceita estruturas não padronizadas, incluindo tags HTML completas (<script>...</script>).
