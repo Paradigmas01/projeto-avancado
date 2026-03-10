@@ -28,6 +28,8 @@ Este documento descreve a implementação completa de testes unitários e de int
 - Mock controlável do `useTranslation` do react-i18next
 - Resolução de ambiguidades em seletores de testes
 - Correção de key props em listas
+- <img width="955" height="251" alt="image" src="https://github.com/user-attachments/assets/c2860c0c-44c7-4244-869e-1186775cb5ff" />
+
 
 ---
 
