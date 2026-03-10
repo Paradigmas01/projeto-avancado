@@ -491,3 +491,16 @@ Sanitização de dados de entrada (proteção primária contra Cross-Site Script
   Falha : Ausência de Validação de Formato e Sanitização
   Descrição: O campo de e-mail/usuário aceita estruturas não padronizadas, incluindo tags HTML completas (<script>...</script>).
   Risco Associado: Se esses dados forem refletidos posteriormente na tela sem tratamento, há o risco de execução de scripts maliciosos.
+
+### 4. Correções e Adequação da Infraestrutura de Testes
+Para garantir a confiabilidade e a execução limpa (100% de aprovação) do pipeline de testes, foram realizadas refatorações estruturais nos arquivos de teste do front-end. As principais intervenções incluíram:
+
+* **Resolução de Escopo e Caminhos Relativos (Imports):** Correção na resolução de módulos (module resolution) em componentes profundamente aninhados (ex: `MyWorks.test.jsx`), ajustando caminhos de importação (`../../../../../`) para garantir que os mocks alcancem os arquivos corretos de serviços e utilitários sem gerar erros de compilação.
+
+* **Mock Global de APIs do Navegador:** Injeção de um mock global para o `IntersectionObserver` no arquivo `setupTests.js`. Como o Jest executa os testes em um ambiente simulado (JSDOM) que não possui essa API nativa (utilizada para lazy loading e animações de scroll), o mock previne quebras de renderização na página Home e no componente raiz (`App.test.js`).
+
+* **Simulação Avançada de Estados e Internacionalização:**
+  * **Jotai (Gerenciamento de Estado):** Aprimoramento do mock da biblioteca para simular o comportamento da função `atom()`. Isso preveniu quebras na renderização (`TypeError: atom is not a function`) e permitiu a injeção manual e controlada de estados de pesquisa e paginação durante os testes de interface.
+  * **i18next (Traduções):** Mapeamento e inclusão de chaves de tradução pendentes (como `common.loading`) no dicionário estático de testes, eliminando falsos negativos onde o Testing Library não encontrava elementos renderizados na tela.
+
+* **Isolamento do Bloco de Auditoria:** Ajuste de escopo no arquivo de testes de Login para garantir que as funções essenciais do Testing Library (`render`, `screen`, `fireEvent`, `waitFor`) estivessem nativamente acessíveis ao bloco de testes da técnica ITF, eliminando erros de referência na execução.
