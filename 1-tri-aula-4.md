@@ -602,6 +602,7 @@ Com a adição desses testes foi possível validar comportamentos importantes da
 
 Esses testes contribuem para aumentar a **confiabilidade**, **manutenibilidade** e **cobertura de testes** do componente `MyWorks`.
 
+---
 
 #Eduardo (MyWorks — Testes Adicionais)
 
