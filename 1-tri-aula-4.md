@@ -506,7 +506,7 @@ Para garantir a confiabilidade e a execução limpa (100% de aprovação) do pip
 * **Isolamento do Bloco de Auditoria:** Ajuste de escopo no arquivo de testes de Login para garantir que as funções essenciais do Testing Library (`render`, `screen`, `fireEvent`, `waitFor`) estivessem nativamente acessíveis ao bloco de testes da técnica ITF, eliminando erros de referência na execução.
 
   ---
-  # Pedro
+# Pedro
 
 ## Arquivo
 `src/app/(authenticated)/student/my-works/newWorks.test.js`
