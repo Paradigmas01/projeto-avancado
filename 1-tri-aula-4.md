@@ -504,3 +504,100 @@ Para garantir a confiabilidade e a execução limpa (100% de aprovação) do pip
   * **i18next (Traduções):** Mapeamento e inclusão de chaves de tradução pendentes (como `common.loading`) no dicionário estático de testes, eliminando falsos negativos onde o Testing Library não encontrava elementos renderizados na tela.
 
 * **Isolamento do Bloco de Auditoria:** Ajuste de escopo no arquivo de testes de Login para garantir que as funções essenciais do Testing Library (`render`, `screen`, `fireEvent`, `waitFor`) estivessem nativamente acessíveis ao bloco de testes da técnica ITF, eliminando erros de referência na execução.
+
+  ---
+  # Pedro
+
+## Arquivo
+`src/app/(authenticated)/student/my-works/newWorks.test.js`
+
+## Objetivo
+Foram adicionados novos testes unitários para melhorar a cobertura de testes da página **MyWorks**, validando comportamentos adicionais da interface relacionados ao **modal de filtros** e ao **campo de busca**.
+
+Os testes utilizam **Jest** e **React Testing Library** para simular interações do usuário e verificar alterações no DOM.
+
+---
+
+# Novos Testes Implementados
+
+## 1. Fechamento do modal de filtros
+
+### Descrição
+Este teste verifica se o modal de filtros é fechado corretamente quando o usuário clica no botão de fechar dentro do próprio modal.
+
+### Fluxo testado
+1. A página `MyWorks` é renderizada.
+2. O usuário clica no botão **filters.filterSearch** para abrir o modal.
+3. O teste confirma que o modal foi renderizado.
+4. O usuário clica no botão **close-modal**.
+5. O teste verifica se o modal foi removido da tela.
+
+### Validação
+Confirma que a ação `onClose` do modal funciona corretamente e altera o estado da interface.
+
+---
+
+## 2. Aplicação de filtros
+
+### Descrição
+Este teste valida o comportamento do sistema ao aplicar filtros no modal.
+
+### Fluxo testado
+1. A página `MyWorks` é renderizada.
+2. O usuário abre o modal de filtros.
+3. O usuário clica no botão **apply-filters**.
+4. O modal dispara a função `onApplyFilters`.
+5. A função utilitária `mapPaginationValues` deve ser chamada.
+6. O modal deve ser fechado após a aplicação dos filtros.
+
+### Validação
+O teste garante que:
+
+- A lógica de transformação de paginação é executada.
+- O fluxo de aplicação de filtros ocorre corretamente.
+- O modal é fechado após a aplicação dos filtros.
+
+---
+
+## 3. Comportamento de toggle do modal de filtros
+
+### Descrição
+Este teste valida o comportamento de **toggle** do botão de filtros, garantindo que o mesmo botão abre e fecha o modal.
+
+### Fluxo testado
+1. A página `MyWorks` é renderizada.
+2. O usuário clica no botão **filters.filterSearch**.
+3. O modal é exibido.
+4. O usuário clica novamente no mesmo botão.
+5. O modal deve ser fechado.
+
+### Validação
+Confirma que o botão de filtro alterna corretamente entre os estados **aberto** e **fechado** do modal.
+
+---
+
+## 4. Verificação do placeholder do campo de busca
+
+### Descrição
+Este teste verifica se o campo de busca é renderizado com o **placeholder correto**.
+
+### Fluxo testado
+1. A página `MyWorks` é renderizada.
+2. O teste localiza o campo de busca utilizando `data-testid="search-input"`.
+3. O teste valida se o atributo `placeholder` contém o valor esperado.
+
+### Validação
+Confirma que o componente `SearchInput` recebe e aplica corretamente o valor de placeholder vindo da função de tradução (`i18n`).
+
+---
+
+# Resultado
+
+Com a adição desses testes foi possível validar comportamentos importantes da interface:
+
+- Fechamento do modal
+- Aplicação de filtros
+- Alternância de abertura/fechamento do modal
+- Renderização correta do campo de busca
+
+Esses testes contribuem para aumentar a **confiabilidade**, **manutenibilidade** e **cobertura de testes** do componente `MyWorks`.
