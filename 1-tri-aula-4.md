@@ -601,3 +601,56 @@ Com a adição desses testes foi possível validar comportamentos importantes da
 - Renderização correta do campo de busca
 
 Esses testes contribuem para aumentar a **confiabilidade**, **manutenibilidade** e **cobertura de testes** do componente `MyWorks`.
+
+
+#Eduardo (MyWorks — Testes Adicionais)
+
+### Testes Adicionais Implementados: MyWorks
+
+Após a suíte inicial de 8 testes, foram implementados 9 testes adicionais para aumentar a cobertura de comportamentos ainda não validados na página "Meus Trabalhos". Os novos testes cobrem interações completas com o modal de filtros, renderização de dados secundários dos cards, comportamentos de paginação e pluralização de resultados.
+
+---
+
+### 1. Contexto
+
+A suíte original validava os fluxos principais da página — renderização, navegação, busca e carregamento. No entanto, diversos comportamentos importantes permaneciam sem cobertura: o que acontece após aplicar filtros, se os dados dos cards (autores, labels, descrições, datas) são exibidos corretamente, e se a paginação responde às interações do usuário. Os testes adicionais foram criados para cobrir exatamente esses cenários.
+
+---
+
+### 2. Novos Cenários Avaliados
+
+**Aplicação de filtros e fechamento do modal**: Verifica se, ao clicar em "Aplicar" dentro do modal de filtros, o modal é removido da tela e a página é resetada para 0. Vale destacar uma decisão técnica importante aqui: o `mockRefetch` não é chamado diretamente pelo `handleApplyFilters` — quem dispara o refetch é o React Query ao detectar mudança nos filtros aplicados. Como o hook está mockado nos testes, o refetch nunca ocorre de fato. Por isso o teste valida os efeitos diretos e garantidos pelo código: o fechamento do modal via `setIsFilterModalOpen(false)` e o reset da página via `setCurrentPage(0)`.
+
+**Fechamento pelo botão "Fechar"**: Complementa o teste de abertura do modal já existente na suíte original, verificando o caminho de saída via `onClose`. Garante que clicar no botão "Fechar" dentro do modal o remove corretamente da tela sem aplicar nenhum filtro.
+
+**Toggle do modal**: Verifica se clicar no botão "Filtrar Trabalhos" duas vezes alterna corretamente entre os estados aberto e fechado do modal, cobrindo o comportamento de toggle implementado com `setIsFilterModalOpen(!isFilterModalOpen)`.
+
+**Renderização dos autores**: Verifica se os nomes dos autores de cada trabalho aparecem nos cards. Esse teste depende de o componente `PaginatedResults` (ou o card interno) renderizar o campo `authors[].name`. Se falhar, o campo não está sendo exibido no card.
+
+**Renderização das labels**: Verifica se as tags associadas a cada trabalho (como "IA", "React", "Testes") aparecem individualmente na tela. Depende de o card iterar e renderizar o campo `labels[]` de cada trabalho.
+
+**Renderização das descrições**: Verifica se os textos de descrição de cada trabalho são exibidos nos cards, cobrindo o campo `description` do mock de dados.
+
+**Paginação**: Verifica se clicar no botão de próxima página chama o `setCurrentPage`. O mock do `useMyWorks` é reconfigurado com `totalPages: 3` para garantir que o botão de próxima página esteja habilitado durante o teste. O seletor do botão utiliza `getByLabelText('Go to next page')` e pode precisar de ajuste conforme o `aria-label` real implementado no `PaginatedResults`.
+
+**Atualização do tamanho da página**: Verifica se alterar o seletor de tamanho de página chama o `setCurrentSize`. Depende de o `PaginatedResults` renderizar um elemento `<select>` (combobox) para esse controle. Se o componente não tiver esse elemento, o teste deve ser adaptado para o elemento correto.
+
+**Pluralização de resultados**: Verifica se o texto exibido usa a forma singular ("1 resultado") quando há apenas um trabalho retornado, cobrindo a lógica que alterna entre as chaves de tradução `pagination.result` e `pagination.results`. Esse cenário não era coberto pela suíte original, que testava apenas o caso com 2 resultados.
+
+**Renderização da data de aprovação**: Verifica se a data de aprovação dos trabalhos aparece na tela. Utiliza `getAllByText(/2024/)` com regex em vez de um texto exato, pois o formato de exibição varia conforme a lógica de formatação do card — podendo ser `"01/03/2024"`, `"2024-03-01"`, `"março de 2024"` ou outro formato.
+
+---
+
+### 3. Decisões Técnicas
+
+**Verificação indireta do refetch**: Como o React Query é mockado via `useMyWorks`, não é possível verificar o refetch diretamente nos testes de filtro. A alternativa adotada foi verificar os efeitos colaterais imediatos do `handleApplyFilters`: fechamento do modal e reset da página. Esses são os comportamentos garantidos pelo código de `page.jsx`, independente do React Query.
+
+**Comentários de atenção**: Três dos novos testes — paginação, tamanho de página e renderização de dados dos cards — dependem de detalhes de implementação do `PaginatedResults` e do componente de card, que não estavam disponíveis durante a escrita dos testes. Para esses casos, foram adicionados comentários `⚠️ ATENÇÃO` no código indicando exatamente qual seletor ou comportamento pode precisar de ajuste conforme a implementação real, evitando falsos negativos silenciosos.
+
+**Uso de regex na data**: O teste de data usa `getAllByText(/2024/)` em vez de um seletor com texto exato, por ser mais resiliente a mudanças de formatação. Se o card alterar o formato da data no futuro, o teste continuará passando enquanto o ano for exibido, evitando quebras desnecessárias.
+
+---
+
+### 4. Resultado
+
+Com os testes adicionais, a suíte da página "Meus Trabalhos" passa de 8 para 17 testes, ampliando a cobertura para incluir o ciclo completo do modal de filtros, dados secundários dos cards (autores, labels, descrições, datas), comportamentos de paginação e pluralização de resultados. Os testes que dependem de componentes externos estão devidamente sinalizados para facilitar ajustes futuros.
